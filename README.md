@@ -1,6 +1,10 @@
 # Sales-Analysis
 
-We have data about sales in a specific store. In this project, I will be using Python and SQL. My assignment here is to clean the data, delete unnecessary columns, add columns I need using Python, and do analysis using SQL.
+In this project, I am working with sales data from a specific store. I will be utilizing Python and SQL to accomplish the following tasks:
+1. **Data Cleaning:** Remove unnecessary columns and handle missing values.
+2. **Data Enhancement:** Add new columns as needed using Python.
+3. **Data Analysis:** Perform a comprehensive analysis using SQL.
+This process will help transform the raw data into a structured format ready for analysis, enabling valuable insights into the store's sales performance.
 
 # Python
 
