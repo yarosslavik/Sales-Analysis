@@ -8,6 +8,7 @@ We have data about sales in a specific store. In this project, I will be using P
 
 First, I want to load my data from kaggle.com.
 I import Kaggle
+
 ![image](https://github.com/user-attachments/assets/d739f0a9-025d-45b3-8335-ffdfa2245422)
 
 # Extracting and Reading Data
@@ -65,6 +66,7 @@ First, we create a table where we store the data.
 
 Next, we top 10 products that generate the highest revenue. 
 I use the SUM function then GROUP it BY product_Id and show only TOP 10 rows.
+
 ![image](https://github.com/user-attachments/assets/419e4e47-ee25-46bd-a29a-f836db57b9dc)
 
 The next task is to find the TOP 5 highest-selling products in each region.
@@ -74,4 +76,22 @@ The next layer is ranking. Here I use Window Function ROW_NUMBER() and give each
 After that, I select only those rows that have rank_number less than 5.
 ![image](https://github.com/user-attachments/assets/466e3d16-5cc3-41e8-b19c-85899a326cf8)
 
+I can do it also with Common Table Expressions (CTE). 
+My subqueries just become CTEs.
+![image](https://github.com/user-attachments/assets/b4135da9-d460-41f0-85f1-a3e07d21453a)
+
+The next task is to find month-over-month growth comparisons for 2022 and 2023 sales.
+Here I also use CTEs.
+For the first two CTEs I SUM sale_price and GROUP it BY YEAR and MONTH. In the first, I specify to only get results with year 2022 and the second with 2023
+In the last query, I select my columns from the first two CTEs JOIN them by MONTH, and calculate the difference in those months within these two years. 
+![image](https://github.com/user-attachments/assets/11263661-ca70-462d-9e7c-4fde54ce51c5)
+
+The next task is to find for each category which month had the highest sales.
+In the first CTE, we calculate our revenue by MONTH and YEAR. 
+Then we assign a rank to each row, partition it by category, and order by total_revenue in descending order. 
+After that, we just select those records that have rank numbers equal to one. 
+![image](https://github.com/user-attachments/assets/7f8261f4-19d4-4c0f-9381-125183f54f03)
+
+
+![image](https://github.com/user-attachments/assets/a01f621e-6014-48ce-b6c3-94f6ff2b20ad)
 
