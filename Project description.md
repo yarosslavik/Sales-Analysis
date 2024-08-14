@@ -58,3 +58,20 @@ We mention the ODBC driver, the SQL Server we want to connect, and a specific da
 Then we load our data into that database. 
 ![image](https://github.com/user-attachments/assets/b740511e-35c3-460f-88fe-adabeb960885)
 
+# SQL
+
+First, we create a table where we store the data.
+![image](https://github.com/user-attachments/assets/85256dc3-cd52-449f-b171-c36bcb3f11e8)
+
+Next, we top 10 products that generate the highest revenue. 
+I use the SUM function then GROUP it BY product_Id and show only TOP 10 rows.
+![image](https://github.com/user-attachments/assets/419e4e47-ee25-46bd-a29a-f836db57b9dc)
+
+The next task is to find the TOP 5 highest-selling products in each region.
+In this example I use subqueries.
+There is the inner query that selects the SUM of sale_price and GROUP it by region and product_id.
+The next layer is ranking. Here I use Window Function ROW_NUMBER() and give each product a rank partitioned by region and ORDERED BY total_revenue descending. 
+After that, I select only those rows that have rank_number less than 5.
+![image](https://github.com/user-attachments/assets/466e3d16-5cc3-41e8-b19c-85899a326cf8)
+
+
