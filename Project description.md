@@ -2,6 +2,8 @@
 
 We have data about sales in a specific store. In this project, I will be using Python and SQL. My assignment here is to clean the data, delete unnecessary columns, add columns I need using Python, and do analysis using SQL.
 
+# Python
+
 # Loading the Dataset
 
 First, I want to load my data from kaggle.com.
