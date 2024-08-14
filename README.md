@@ -2,11 +2,15 @@
 
 We have data about sales in a specific store. In this project, I will be using Python and SQL. My assignment here is to clean the data, delete unnecessary columns, add columns I need using Python, and do analysis using SQL.
 
-First of all, I want to load my data from kaggle.com.
+# Loading the Dataset
+
+First, I want to load my data from kaggle.com.
 I import Kaggle
 ![image](https://github.com/user-attachments/assets/d739f0a9-025d-45b3-8335-ffdfa2245422)
 
-and then download my dataset from it.
+# Extracting and Reading Data
+
+I download my dataset from it.
 ![image](https://github.com/user-attachments/assets/5be8dac1-9007-4b9c-897b-3d35042ee4b3)
 
 The next thing I want to do is to extract my orders from a zip file and I will do it with the help of Python.
@@ -15,10 +19,14 @@ The next thing I want to do is to extract my orders from a zip file and I will d
 Our file is successfully extracted and now we read it and handle NULL values using the library Pandas.
 ![image](https://github.com/user-attachments/assets/d464bc7c-cf87-483c-bf7d-6ad7226be9a5)
 
-Then we make our headers more suitable for SQL, lowering them and replacing spaces with underscores. 
+# Preparing Data for SQL
+
+I make our headers more suitable for SQL, lowering them and replacing spaces with underscores. 
 ![image](https://github.com/user-attachments/assets/0641f6c6-13e3-4cc0-8cd9-5ed38ea65755)
 
-After that, I want to create a new discount column and calculate it using price and discount percent. 
+# Adding Calculated Columns
+
+I want to create a new discount column and calculate it using price and discount percent. 
 ![image](https://github.com/user-attachments/assets/08f5606f-45c3-42fa-879c-423efff2c286)
 
 To my dataset, I add the sales_price column:
@@ -27,9 +35,13 @@ To my dataset, I add the sales_price column:
 Using sales_price and cost_price I want to have a column for our profit:
 ![image](https://github.com/user-attachments/assets/6df4cf1e-5b07-4acb-8b0b-57e8cd6dfcff)
 
+# Data Type Conversion
+
 I want to change the data type of order_date from object to DateTime and I can do it using the Pandas function pd.to_datetime().
 
 ![image](https://github.com/user-attachments/assets/40a832fe-9d6f-4d63-8e50-3b5960d3b493)
+
+# Cleaning the Dataset
 
 Then, with the help of Pandas, I deleted columns that I no longer needed.
 ![image](https://github.com/user-attachments/assets/9c9ecd1b-293d-49a2-a824-f31aed5052a5)
