@@ -92,6 +92,9 @@ Then we assign a rank to each row, partition it by category, and order by total_
 After that, we just select those records that have rank numbers equal to one. 
 ![image](https://github.com/user-attachments/assets/7f8261f4-19d4-4c0f-9381-125183f54f03)
 
-
+The last task is to find out which subcategory had the highest growth by profit in 2023 compared to 2022.
+Firstly, we SUM sale_price and GROUP it BY YEAR and subcategory. 
+After that, we used the CASE statement to SUM sales separately which were 2022 and 2023 years. 
+The last step is to calculate the difference and divide it by 2022 year sales. Then we order in descending and in that way we get our percentage of the biggest sales difference in subcategories between 2022 and 2023. 
 ![image](https://github.com/user-attachments/assets/a01f621e-6014-48ce-b6c3-94f6ff2b20ad)
 
