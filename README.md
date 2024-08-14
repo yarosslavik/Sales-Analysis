@@ -46,6 +46,8 @@ I want to change the data type of order_date from object to DateTime and I can d
 Then, with the help of Pandas, I deleted columns that I no longer needed.
 ![image](https://github.com/user-attachments/assets/9c9ecd1b-293d-49a2-a824-f31aed5052a5)
 
+# Extracting dataset to SQL
+
 For analyzing I want to use SQL, so the next step will be to load our data into SQL and I do that with sqlalchemy library.
 Here we are setting up a connection to a SQL Server database using the pandas and sqlalchemy.
 We mention the ODBC driver, the SQL Server we want to connect, and a specific database we want to connect.
